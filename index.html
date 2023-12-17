@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Todo List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Josefin+Sans:wght@600&family=Poppins:wght@300;600;700&family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Todo List</h1>
+    <form id="todo-form">
+      <input type="text" id="task-input" placeholder="Add a new task..." required autofocus>
+
+      <select id="priority-select" placeholder="priority-select">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+
+      <button type="submit" id="add-button">Add Task</button>
+    </form>
+    <div class="filter-sort">
+      <label>Filter by Status:</label>
+
+      <select id="filter-status">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+      </select>
+
+
+      <label>Sort by Priority:</label>
+      <select id="sort-by-priority">
+        <option value="none">None</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+
+
+    <ul id="task-list" class="task-items">
+      <!-- Tasks will be dynamically added here -->
+    </ul>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
